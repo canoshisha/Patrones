@@ -16,13 +16,14 @@ public class EmailStrategy  implements Estrategy{
     public void setEmail(String email) {
         this.mEmail = email;
     }
-
-    public void enviar(Noticia noticia) {
-        System.out.println("Enviando al email: "+mEmail+ " la noticia:\n "+noticia);
-    }
     
     public String getTipoStrategy(){
         return "E-Mail";
+    }
+
+    @Override
+    public void enviar(Update actualizacion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
