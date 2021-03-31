@@ -21,7 +21,7 @@ public class SMSStrategy implements Estrategy{
     
     @Override
     public void enviar(Update update) {
-        System.out.println("Enviando al telefono: "+tlf+ " la noticia:\n "+update);
+        System.out.println("Enviando al telefono: "+tlf+ " \nLa actualizacion:\n "+update);
     }
 
     @Override

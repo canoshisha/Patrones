@@ -3,18 +3,18 @@ package patrones;
 
 
 public class EmailStrategy  implements Estrategy{
-     private String mEmail;
+     private String Email;
 
     public EmailStrategy(String email) {
-        this.mEmail = email;
+        this.Email = email;
     }
 
     public String getEmail() {
-        return mEmail;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.mEmail = email;
+        this.Email = email;
     }
     
     public String getTipoStrategy(){
@@ -22,8 +22,8 @@ public class EmailStrategy  implements Estrategy{
     }
 
     @Override
-    public void enviar(Update actualizacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void enviar(Update update) {
+        System.out.println("Enviando al email: "+Email+ " \nLa actualizacion:\n "+update);
     }
     
 }
