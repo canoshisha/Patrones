@@ -11,7 +11,6 @@ public class Player extends Persona{
         this.hastag = hastag;
     }
 
-
     public String getNick() {
         return nick;
     }
