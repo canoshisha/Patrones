@@ -31,8 +31,6 @@ public class Player extends Persona implements Observer{
     public void setHastag(String hastag) {
         this.hastag = hastag;
     }
-   
-
     
     //Codigo para modificaciones
     public void setStrategy(Strategy strategy) {
