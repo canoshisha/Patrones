@@ -2,7 +2,7 @@
 package patrones;
 
 
-public class SMSStrategy implements Estrategy{
+public class SMSStrategy implements Strategy{
 
     String tlf;
 

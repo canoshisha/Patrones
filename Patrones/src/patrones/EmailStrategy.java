@@ -2,7 +2,7 @@
 package patrones;
 
 
-public class EmailStrategy  implements Estrategy{
+public class EmailStrategy  implements Strategy{
      private String Email;
 
     public EmailStrategy(String email) {

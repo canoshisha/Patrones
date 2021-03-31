@@ -4,7 +4,7 @@ package patrones;
  *
  * @author matero
  */
-public interface Estrategy {
+public interface Strategy {
 
     void enviar(Update actualizacion);
 
