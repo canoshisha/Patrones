@@ -9,6 +9,6 @@ package patrones;
  *
  * @author matero
  */
-public interface Estrategy {
+public class Actualizacion {
     
 }
