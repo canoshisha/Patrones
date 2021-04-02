@@ -10,6 +10,8 @@ public class Platform implements Observable{
     private static Platform instance;
     List<Observer> Observers;
     List<IUpdate> updates;
+    Forum forum;
+    
 
     private Platform() {
         this.Observers = new ArrayList<>();
