@@ -1,23 +1,46 @@
 
 package patrones;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Platform implements Observable{
 
+    private static Platform instance;
+    List<Observer> Observers;
+    List<IUpdate> updates;
+
+    private Platform() {
+        this.Observers = new ArrayList<>();
+        this.updates = new ArrayList<>();
+    }
+    
+  
+    public static Platform getInstance(){
+        if (instance==null)
+            instance=new Platform();
+        return instance;
+     
+    }
     
     @Override
-    public void registerObserver(Observer o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void removeObserver(Observer o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public void notifyObservers() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for(Observer o:Observers)
+            o.update(updates.get(updates.size() - 1));
+    }
+
+    public void registerObserver(Observer o) {
+        this.Observers.add(o);
+    }
+
+    public void removeObserver(Observer o) {
+        this.Observers.remove(o);
+    }
+    
+    public void addNoticia(IUpdate update){
+        this.updates.add(update);
+        this.notifyObservers();
     }
     
 }

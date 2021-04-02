@@ -22,7 +22,7 @@ public class EmailStrategy  implements Strategy{
     }
 
     @Override
-    public void enviar(Update update) {
+    public void enviar(IUpdate update) {
         System.out.println("Enviando al email: "+Email+ " \nLa actualizacion:\n "+update);
     }
     
