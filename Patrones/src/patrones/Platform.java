@@ -11,11 +11,13 @@ public class Platform implements Observable{
     List<Observer> Observers;
     List<IUpdate> updates;
     Forum forum;
-    
+    Ranking ranking;
 
     private Platform() {
         this.Observers = new ArrayList<>();
         this.updates = new ArrayList<>();
+        forum = new Forum();
+        ranking = new Ranking();
     }
     
   
