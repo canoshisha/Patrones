@@ -26,12 +26,7 @@ public class IteratorMarketPlace {
         position++;
         return game;
     }
-    public void remove(){
-        if(position < listGame.size() && position > 0){
-            listGame.remove(position - 1);
-            position--;
-        }
-    }
+    
     
     
 }
