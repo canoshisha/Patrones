@@ -1,18 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package patrones;
 
 import java.util.List;
 
 public class IteratorMarketPlace {
     
-    private List<IGame> listGame;
+    private List<Game> listGame;
     private int position;
 
-    public IteratorMarketPlace(List<IGame> listGame) {
+    public IteratorMarketPlace(List<Game> listGame) {
         this.listGame = listGame;
         this.position = 0;
     }
@@ -21,8 +17,8 @@ public class IteratorMarketPlace {
         return position < listGame.size();
     }
     
-    public IGame next(){
-        IGame game = listGame.get(position);
+    public Game next(){
+        Game game = listGame.get(position);
         position++;
         return game;
     }
