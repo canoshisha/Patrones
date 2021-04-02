@@ -2,10 +2,10 @@
 package patrones;
 import java.util.*;
 
-public class MarketPlace {
+public class MarketPlace{
     
     List<Game> games_list;
-
+    
     public MarketPlace() {
         
     }
@@ -18,7 +18,7 @@ public class MarketPlace {
         return games_list;
     }
     public boolean removeGame(String name){
-        Iterator game = games_list.iterator();
+        IteratorMarketPlace game = (IteratorMarketPlace) games_list.iterator();
         boolean terminado = false;
         Game actual = (Game) game;
         Game searched = null;
@@ -27,7 +27,7 @@ public class MarketPlace {
             terminado = true;
         }else {
             while (game.hasNext()) {
-                game = (Iterator) game.next();
+                game = games_list ;
                 actual = (Game) game;
                 if (actual.getNombre().compareToIgnoreCase(name) == 0) {
                     searched = actual;
