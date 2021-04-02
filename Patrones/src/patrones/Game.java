@@ -15,6 +15,10 @@ public class Game {
         this.multiplayer = multiplayer;
     }
 
+    public Game(String nombre) {
+        this.nombre = nombre;
+    }
+    
     public String getNombre() {
         return nombre;
     }
