@@ -20,7 +20,7 @@ public class SMSStrategy implements Strategy{
     
     
     @Override
-    public void enviar(Update update) {
+    public void enviar(IUpdate update) {
         System.out.println("Enviando al telefono: "+tlf+ " \nLa actualizacion:\n "+update);
     }
 

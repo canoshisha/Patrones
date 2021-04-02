@@ -6,7 +6,7 @@ package patrones;
  */
 public interface Strategy {
 
-    void enviar(Update actualizacion);
+    void enviar(IUpdate actualizacion);
 
     String getTipoStrategy();
 }

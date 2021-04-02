@@ -3,5 +3,5 @@ package patrones;
 
 
 public interface Observer {
-    public void update(Update actualizacion);
+    public void update(IUpdate actualizacion);
 }
