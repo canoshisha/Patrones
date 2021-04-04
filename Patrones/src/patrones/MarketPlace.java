@@ -18,17 +18,16 @@ public class MarketPlace{
         return games_list;
     }
     public boolean removeGame(String name){
-        IteratorMarketPlace game = (IteratorMarketPlace) games_list.iterator();
+        IteratorMarketPlace game = new IteratorMarketPlace(games_list);
         boolean terminado = false;
-        Game actual = (Game) game;
+        Game actual = game.next();
         Game searched = null;
         if(actual.getNombre().compareToIgnoreCase(name)==0){
             searched = actual;
             terminado = true;
         }else {
             while (game.hasNext()) {
-                game = games_list ;
-                actual = (Game) game;
+                actual = game.next();
                 if (actual.getNombre().compareToIgnoreCase(name) == 0) {
                     searched = actual;
                     terminado = true;
