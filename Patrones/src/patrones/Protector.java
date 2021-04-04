@@ -4,7 +4,6 @@ package patrones;
 
 public class Protector extends Champion {
     
-    public String special_move;
             
     public Protector(String alias,String skin,String special_move){
         setAlias(alias);

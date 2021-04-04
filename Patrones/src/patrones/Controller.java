@@ -4,7 +4,6 @@ package patrones;
 
 public class Controller extends Champion{
     
-      public String special_move;
             
     public Controller(String alias,String skin,String special_move){
         setAlias(alias);

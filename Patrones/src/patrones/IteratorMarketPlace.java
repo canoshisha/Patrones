@@ -10,6 +10,7 @@ public class IteratorMarketPlace {
 
     public IteratorMarketPlace(List<Game> listGame) {
         this.listGame = listGame;
+        listGame.sort(new ComparadorGames());
         this.position = 0;
     }
     

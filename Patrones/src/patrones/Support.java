@@ -4,7 +4,7 @@ package patrones;
 
 public class Support extends Champion{
 
-public String special_move;
+
             
     public Support(String alias,String skin,String special_move){
         setAlias(alias);

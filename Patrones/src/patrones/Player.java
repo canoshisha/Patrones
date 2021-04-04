@@ -56,19 +56,6 @@ public class Player extends Persona implements Observer{
         Actualizaciones.add(actualizacion);
         mStrategy.enviar(actualizacion);
     }
-    public int compareTo(Player player){
-        int cmp;
-        if(player.getHorasJugadas() < this.getHorasJugadas()){
-            cmp = -1;
-        }else if(player.getHorasJugadas() > this.getHorasJugadas()){
-            cmp = 1;
-        }else{
-            cmp = 0;
-        }
-        
-        return cmp;
-    }
-
     
    
     

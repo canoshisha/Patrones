@@ -1,12 +1,12 @@
 package patrones;
 
+import java.util.List;
+
 public interface IGame {
 
     public String getNombre();
 
     public String getEmpresa();
-
-    public int getNumChampions();
 
     public boolean isMultiplayer();
 
@@ -14,9 +14,11 @@ public interface IGame {
 
     public void setEmpresa(String empresa);
 
-    public void setNumChampions(int numChampions);
-
     public void setMultiplayer(boolean multiplayer);
+    
+    public void newChampion(int code,String alias,String skin, String special_move);
+
+    public List<Champion> getChampions();
 
     @Override
     public String toString();
