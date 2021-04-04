@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Ranking {
     
-    Set<Player> players_list;
+    private Set<Player> players_list;
 
     public Ranking() {
         players_list = new HashSet<>();
