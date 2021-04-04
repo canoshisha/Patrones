@@ -14,15 +14,19 @@ public class IteratorMarketPlace {
     }
     
     public boolean hasNext(){
-        return position <= listGame.size();
+        return position < listGame.size()-1;
     }
     
     public Game next(){
-        Game game = listGame.get(position);
         position++;
+        Game game = listGame.get(position);
         return game;
     }
     
+    public Game actual(){
+        Game game = listGame.get(position);
+        return game;
+    }
     
     
 }
