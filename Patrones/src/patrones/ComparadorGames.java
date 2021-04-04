@@ -6,10 +6,10 @@
 package patrones;
 
 import java.util.*;
-public class ComparadorGames implements Comparator<Game>{
+public class ComparadorGames implements Comparator<IGame>{
 
     @Override
-    public int compare(Game g1, Game g2) {
+    public int compare(IGame g1, IGame g2) {
         int cmp = g1.getNombre().compareToIgnoreCase(g2.getNombre());
         if(cmp == 0){
             cmp = g1.getEmpresa().compareToIgnoreCase(g2.getEmpresa());
