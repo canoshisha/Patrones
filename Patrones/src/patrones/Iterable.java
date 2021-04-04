@@ -1,10 +1,10 @@
 package patrones;
 
-public interface IteratorInterface {
+public interface Iterable {
 
     public boolean hasNext();
 
     public IGame next();
 
-    public void remove();
+    public IGame first();
 }

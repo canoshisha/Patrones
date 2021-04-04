@@ -2,7 +2,7 @@
 package patrones;
 import java.util.*;
 
-public class Game {
+public class Game implements IGame{
     private String nombre;
     private String empresa;
     private boolean multiplayer;

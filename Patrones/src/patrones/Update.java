@@ -2,7 +2,7 @@
 package patrones;
 
 
-public class Update {
+public class Update implements IUpdate{
     private String Titulo;
     private String Descripcion;
     private String Fecha;
