@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Ranking {
     
-    private Set<Player> players_list;
+    private List<Player> players_list;
 
     public Ranking() {
-        players_list = new HashSet<>();
+        players_list = new ArrayList<>();
     }
     
     public boolean addPlayer(Player new_player){
@@ -15,10 +15,11 @@ public class Ranking {
         
     }
     public boolean removePlayer(Player player){
+        
         return players_list.remove(player);
     }
 
-    public Set<Player> getPlayers_list() {
+    public List<Player> getPlayers_list() {
         return players_list;
     }
     

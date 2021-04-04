@@ -46,5 +46,27 @@ public class Platform implements Observable{
         this.updates.add(update);
         this.notifyObservers();
     }
+    public String playerList(){
+        String list = "";
+        for (int i = 0; i < ranking.getPlayers_list().size(); i++) {
+            list += "Player: "+ranking.getPlayers_list().get(i)+", hours played: "+ranking.getPlayers_list().get(i).getHorasJugadas()+"\n";
+        }
+        
+        return list;
+    }
+    public String comments(){
+        String comments = "Good Comments\n";
+        for (int i = 0; i < forum.getGoodComments().size(); i++) {
+            comments += "Comment "+i+"\n";
+            comments += forum.getGoodComments().get(i)+"\n";
+        }
+        comments = "Bad Comments\n";
+        for (int i = 0; i < forum.getBadComments().size(); i++) {
+            comments += "Comment "+i+"\n";
+            comments += forum.getBadComments().get(i)+"\n";
+        }
+        
+        return comments;
+    }
     
 }
