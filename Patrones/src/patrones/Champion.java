@@ -7,16 +7,7 @@ public class Champion {
     public int health,attack,defense;
     public String skin,alias;
     
-    public Champion(){
-        
-    }
-
-    public Champion(String skin, String alias) {
-        this.skin = skin;
-        this.alias = alias;
-    }
     
-
     public int getHealth() {
         return health;
     }
