@@ -14,7 +14,7 @@ public class IteratorMarketPlace {
     }
     
     public boolean hasNext(){
-        return position < listGame.size();
+        return position <= listGame.size();
     }
     
     public Game next(){
