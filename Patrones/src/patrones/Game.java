@@ -1,17 +1,17 @@
 
 package patrones;
-
+import java.util.*;
 
 public class Game {
     private String nombre;
     private String empresa;
-    private int numChampions;
     private boolean multiplayer;
+    private Champion_Customizer champion;
+    private List<Champion> champions;
 
-    public Game(String nombre, String empresa, int numChampions, boolean multiplayer) {
+    public Game(String nombre, String empresa, boolean multiplayer) {
         this.nombre = nombre;
         this.empresa = empresa;
-        this.numChampions = numChampions;
         this.multiplayer = multiplayer;
     }
 
@@ -35,13 +35,6 @@ public class Game {
         this.empresa = empresa;
     }
 
-    public int getNumChampions() {
-        return numChampions;
-    }
-
-    public void setNumChampions(int numChampions) {
-        this.numChampions = numChampions;
-    }
 
     public boolean isMultiplayer() {
         return multiplayer;
@@ -51,11 +44,20 @@ public class Game {
         this.multiplayer = multiplayer;
     }
 
+    public void newChampion(int code,String alias,String skin, String special_move){
+        Champion newChampion = champion.createChampion( code, alias, skin, special_move);
+        champions.add(newChampion);
+    }
+
+    public List<Champion> getChampions() {
+        return champions;
+    }
+    
     @Override
     public String toString() {
         String s="Nombre del juego: "+getNombre();
         s+="Empresa del juego: "+getEmpresa();
-        s+="Numero de personajes del juego: "+getNumChampions();
+        s+="Numero de personajes del juego: "+getChampions().size();
         s+="Multijugador del juego: "+isMultiplayer();
         return s;
     }
