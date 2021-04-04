@@ -20,7 +20,7 @@ public class MarketPlace{
     public boolean removeGame(String name){
         IteratorNameGame game = new IteratorNameGame(games_list);
         boolean terminado = false;
-        IGame actual = game.actual();
+        IGame actual = game.first();
         IGame searched = null;
         if(actual.getNombre().compareToIgnoreCase(name)==0){
             searched = actual;

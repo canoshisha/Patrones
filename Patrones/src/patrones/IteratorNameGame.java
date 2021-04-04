@@ -4,7 +4,7 @@ package patrones;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IteratorNameGame {
+public class IteratorNameGame implements Iterable{
     
     private List<IGame> sortlistGame;
     private int position;
