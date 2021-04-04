@@ -11,6 +11,12 @@ public class Champion {
         
     }
 
+    public Champion(String skin, String alias) {
+        this.skin = skin;
+        this.alias = alias;
+    }
+    
+
     public int getHealth() {
         return health;
     }
