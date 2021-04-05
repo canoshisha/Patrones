@@ -4,7 +4,7 @@ import java.util.*;
 
 public class MarketPlace{
     
-    List<Game> games_list;
+    List<IGame> games_list;
     
     public MarketPlace() {
         
@@ -14,14 +14,14 @@ public class MarketPlace{
         games_list.add(game);
     }
     
-    public List<Game> getLista_juegos(){
+    public List<IGame> getLista_juegos(){
         return games_list;
     }
     public boolean removeGame(String name){
-        IteratorMarketPlace game = new IteratorMarketPlace(games_list);
+        IteratorNameGame game = new IteratorNameGame(games_list);
         boolean terminado = false;
-        Game actual = game.actual();
-        Game searched = null;
+        IGame actual = game.first();
+        IGame searched = null;
         if(actual.getNombre().compareToIgnoreCase(name)==0){
             searched = actual;
             terminado = true;

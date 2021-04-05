@@ -12,6 +12,7 @@ public class Platform implements Observable{
     List<IUpdate> updates;
     Forum forum;
     Ranking ranking;
+    MarketPlace marketplace;
 
     private Platform() {
         this.Observers = new ArrayList<>();
