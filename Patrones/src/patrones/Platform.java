@@ -28,6 +28,19 @@ public class Platform implements Observable{
         return instance;
      
     }
+
+    public List<Player> getPlayers() {
+        return ranking.getPlayers_list();
+    }
+
+    public void addPlayerstoRanking(Player player) {
+        this.ranking.addPlayer(player);
+    }
+
+    public Forum getForum() {
+        return forum;
+    }
+    
     
     @Override
     public void notifyObservers() {

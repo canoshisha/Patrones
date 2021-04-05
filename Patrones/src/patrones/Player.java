@@ -11,6 +11,7 @@ public class Player extends Persona implements Observer{
     double horasJugadas;
     List<IUpdate> Actualizaciones=new ArrayList<>();
     private Strategy mStrategy=new EmailStrategy(super.getCorreo());
+    private InterfaceServerPlayer facade;
     
     public Player(String nombre, String apellido1, String apellido2, String correo, int telefono, String nick, String hastag) {//constructor solo persona
         super(nombre, apellido1, apellido2, correo, telefono);
@@ -57,6 +58,20 @@ public class Player extends Persona implements Observer{
         mStrategy.enviar(actualizacion);
     }
     
-   
+    public void showListComments(){
+        facade.showListComments();
+    }
+    public void showRanking(){
+        facade.showRanking();
+    }
+    public void showListGames(){
+        facade.showListGames();
+    }
+    public void createGoodComment(){
+        facade.createGoodComment();
+    }
+    public void createBadComment(){
+        facade.createBadComment();
+    }
     
 }
