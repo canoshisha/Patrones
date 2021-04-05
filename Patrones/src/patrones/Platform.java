@@ -69,5 +69,13 @@ public class Platform implements Observable{
         
         return comments;
     }
+    public String GameList(){
+        String list = "";
+        for (int i = 0; i < marketplace.getLista_juegos().size(); i++) {
+            list += ""+marketplace.getLista_juegos().get(i)+"\n";
+        }
+        
+        return list;
+    }
     
 }
