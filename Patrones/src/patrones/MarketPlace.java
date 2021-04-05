@@ -2,7 +2,7 @@
 package patrones;
 import java.util.*;
 
-public class MarketPlace{
+public class MarketPlace implements Iterator{
     
     List<IGame> games_list;
     
@@ -18,7 +18,7 @@ public class MarketPlace{
         return games_list;
     }
     public boolean removeGameName(String name){
-        IteratorNameGame game = new IteratorNameGame(games_list);
+        IteratorNameGame game = (IteratorNameGame) createNameIterator();
         boolean terminado = false;
         IGame actual = game.first();
         IGame searched = null;
@@ -43,7 +43,7 @@ public class MarketPlace{
         
     }
     public boolean removeGameBusiness(String name){
-        IteratorBusinessGame game = new IteratorBusinessGame(games_list);
+        IteratorBusinessGame game = (IteratorBusinessGame)createBusinessIterator();
         boolean terminado = false;
         IGame actual = game.first();
         IGame searched = null;
@@ -66,5 +66,17 @@ public class MarketPlace{
             return false;
         }
         
+    }
+
+    @Override
+    public Iterator createNameIterator() {
+        Iterator it = (Iterator) new IteratorNameGame(games_list);
+        return it;
+    }
+
+    @Override
+    public Iterator createBusinessIterator() {
+        Iterator it = (Iterator) new IteratorBusinessGame(games_list);
+        return it;
     }
 }
