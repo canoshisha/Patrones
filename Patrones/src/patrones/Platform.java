@@ -19,6 +19,7 @@ public class Platform implements Observable{
         this.updates = new ArrayList<>();
         forum = new Forum();
         ranking = new Ranking();
+        marketplace = new MarketPlace();
     }
     
   
@@ -36,6 +37,10 @@ public class Platform implements Observable{
     public void addPlayerstoRanking(Player player) {
         this.ranking.addPlayer(player);
     }
+    public void addGametoMarketplace(Game game){
+        this.marketplace.addGame(game);
+    }
+    
 
     public Forum getForum() {
         return forum;
@@ -56,10 +61,12 @@ public class Platform implements Observable{
         this.Observers.remove(o);
     }
     
-    public void addNoticia(IUpdate update){
+    public void addUpdate(IUpdate update){
         this.updates.add(update);
         this.notifyObservers();
     }
+    
+    
     public String playerList(){
         String list = "";
         for (int i = 0; i < ranking.getPlayers_list().size(); i++) {
